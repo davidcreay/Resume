@@ -1,75 +1,75 @@
-{%- for job in experience -%}
+\BLOCK{ for job in experience }
 \noindent
-{% if not graphics %}
+\BLOCK{ if not graphics }
     % --- RENDER WITHOUT LOGO COLUMN ---
     \hspace*{-2pt}\begin{tabular}[t]{ @{} l @{} }
-        {\large\textbf{ {{ job.position|trim }} }}$\cdot$
-        \textbf{ {{- job.company|trim }} } $\cdot$ {{ job.employment_type }} \\
+        {\large\textbf{ \VAR{ job.position|trim } }}$\cdot$
+        \textbf{ \VAR{ job.company|trim } } $\cdot$ \VAR{ job.employment_type } \\
         \jobdetail{
-            {% if job.start_date.month -%}
-                {{ job.start_date.month }} {{ job.start_date.year }} -- {% if job.current %}Present{% else %}{{ job.end_date.month }} {{ job.end_date.year }}{% endif -%}
-            {%- else -%}
-                {{ job.duration -}}
-            {%- endif -%}
-            {%- if job.duration_label %} $\cdot$ {{ job.duration_label }}{% endif -%}%
+            \BLOCK{ if job.start_date.month }
+                \VAR{ job.start_date.month } \VAR{ job.start_date.year } -- \BLOCK{ if job.current }Present\BLOCK{ else }\VAR{ job.end_date.month } \VAR{ job.end_date.year }\BLOCK{ endif }
+            \BLOCK{ else }
+                \VAR{ job.duration }
+            \BLOCK{ endif }
+            \BLOCK{ if job.duration_label } $\cdot$ \VAR{ job.duration_label }\BLOCK{ endif }
         },
-        \jobdetail{ {{ job.location|trim }} $\cdot$ {{ job.location_type|trim }} }
+        \jobdetail{ \VAR{ job.location|trim } $\cdot$ \VAR{ job.location_type|trim } }
     \end{tabular}
-{% else %}
-\begin{tabular}{ @{} p{1.5cm} @{} p{\dimexpr\linewidth-1.5cm\relax} @{} }
-    % --- COLUMN 1: LOGO ---
-    \raisebox{\dimexpr-\height+\baselineskip}{
-        \includegraphics[width=1.2cm,height=1.2cm,keepaspectratio]{ {{ job.logo }} }
-    }
-    &
-    % --- COLUMN 2: DETAILS ---
-
-    \begin{tabular}[t]{ @{} l @{} }
-        {\large\textbf{ {{ job.position|trim }} }}$\cdot$
-        \textbf{ {{- job.company|trim }} }$\cdot$ {{ job.employment_type }} \\
-        \jobdetail{
-            {% if job.start_date.month -%}
-                {{ job.start_date.month }} {{ job.start_date.year }} -- {% if job.current %}Present{% else %}{{ job.end_date.month }} {{ job.end_date.year }}{% endif -%}
-            {%- else -%}
-                {{ job.duration -}}
-            {%- endif -%}
-            {%- if job.duration_label %} $\cdot$ {{ job.duration_label }}{% endif -%}%
-        },
-        \jobdetail{ {{ job.location|trim }} $\cdot$ {{ job.location_type|trim }} }
+\BLOCK{ else }
+    % --- RENDER WITH LOGO COLUMN ---
+    \begin{tabular}{ @{} p{1.5cm} @{} p{\dimexpr\linewidth-1.5cm\relax} @{} }
+        % COLUMN 1: LOGO
+        \raisebox{\dimexpr-\height+\baselineskip}{
+            \includegraphics[width=1.2cm,height=1.2cm,keepaspectratio]{ \VAR{ job.logo } }
+        }
+        &
+        % COLUMN 2: DETAILS
+        \begin{tabular}[t]{ @{} l @{} }
+            {\large\textbf{ \VAR{ job.position|trim } }}$\cdot$
+            \textbf{ \VAR{ job.company|trim } }$\cdot$ \VAR{ job.employment_type } \\
+            \jobdetail{
+                \BLOCK{ if job.start_date.month }
+                    \VAR{ job.start_date.month } \VAR{ job.start_date.year } -- \BLOCK{ if job.current }Present\BLOCK{ else }\VAR{ job.end_date.month } \VAR{ job.end_date.year }\BLOCK{ endif }
+                \BLOCK{ else }
+                    \VAR{ job.duration }
+                \BLOCK{ endif }
+                \BLOCK{ if job.duration_label } $\cdot$ \VAR{ job.duration_label }\BLOCK{ endif }
+            },
+            \jobdetail{ \VAR{ job.location|trim } $\cdot$ \VAR{ job.location_type|trim } }
+        \end{tabular}
     \end{tabular}
-\end{tabular}
-{% endif %}
+\BLOCK{ endif }
 \vspace{6pt}
 
-{% if job.description %}
-\noindent {{ job.description|trim }}
+\BLOCK{ if job.description }
+\noindent \VAR{ job.description|trim }
 \vspace{4pt}
-{% endif %}
+\BLOCK{ endif }
 
-{% if job.achievements %}
-\noindent\textbf{Key Achievement{% if job.achievements|length > 1 %}s{% endif %}:}
+\BLOCK{ if job.achievements }
+\noindent\textbf{Key Achievement\BLOCK{ if job.achievements|length > 1 }s\BLOCK{ endif }:}
 \begin{itemize}[leftmargin=1.5em, nosep, topsep=2pt]
-    {% for bullet in job.achievements -%}
-    \item {{ bullet }}
-    {% endfor -%}
+    \BLOCK{ for bullet in job.achievements }
+    \item \VAR{ bullet }
+    \BLOCK{ endfor }
 \end{itemize}
 \vspace{4pt}
-{% endif %}
+\BLOCK{ endif }
 
-{% if job.responsibilities %}
+\BLOCK{ if job.responsibilities }
 \noindent\textbf{Responsibilities:}
 \begin{itemize}[leftmargin=1.5em, nosep, topsep=2pt]
-    {% for resp in job.responsibilities -%}
-    \item {{ resp }}
-    {% endfor -%}
+    \BLOCK{ for resp in job.responsibilities }
+    \item \VAR{ resp }
+    \BLOCK{ endfor }
 \end{itemize}
 \vspace{4pt}
-{% endif %}
+\BLOCK{ endif }
 
-{% if job.skills %}
-\noindent\textbf{Skills:} {{ job.skills | join(' $\cdot$ ') }}
-\vspace{10pt} % Adjusted from 4pt to give a clear but clean separation
-{% endif %}
+\BLOCK{ if job.skills }
+\noindent\textbf{Skills:} \VAR{ job.skills | join(' $\cdot$ ') }
+\vspace{10pt}
+\BLOCK{ endif }
 
-\vspace{12pt} % This controls the gap between different job entries
-{% endfor %}
+\vspace{12pt} % Separation between job entries
+\BLOCK{ endfor }

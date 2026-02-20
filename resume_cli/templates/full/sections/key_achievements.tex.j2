@@ -1,0 +1,8 @@
+\cvsection{Key Achievements}
+\BLOCK{ for item in achievements }
+% Ensure no spaces between the macro and the braces to prevent alignment issues
+\cvachievement{\VAR{ item.icon }}{\VAR{ item.title }}{\VAR{ item.description }}
+\BLOCK{ if not loop.last }
+\divider
+\BLOCK{ endif }
+\BLOCK{ endfor }

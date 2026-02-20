@@ -1,7 +1,0 @@
-
-{% for item in achievements[:4] -%}
-\cvachievement{ {{- item.icon | default('\faCheck') }} }{ {{ item.title | replace('&', '\&') }} }{ {{ item.description | replace('&', '\&') }} }
-{% if not loop.last -%}
-\divider
-{% endif -%}
-{% endfor %}

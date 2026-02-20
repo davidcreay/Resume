@@ -1,0 +1,13 @@
+\cvsection{Languages}
+\BLOCK{ for pair in languages[:2] | batch(2) }
+\begin{minipage}[t]{0.48\linewidth}
+  \cvlanguage{\VAR{ pair[0].language } }{\VAR{ pair[0].fluency } }{ 5 }
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+  \BLOCK{ if pair[1] }
+  \cvlanguage{\VAR{ pair[1].language } }{\VAR{ pair[1].fluency } }{ 3 }
+  \BLOCK{ endif }
+\end{minipage}
+\\[1.5ex]
+\BLOCK{ endfor }

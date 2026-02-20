@@ -1,0 +1,65 @@
+\documentclass[8pt,a4paper,ragged2e,withhyper]{enhancv}
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+
+\begin{document}
+
+\name{\hspace{-0.25ex}\VAR{ basics.name }}
+\tagline{ \VAR{ basics.title } }
+
+\personalinfo{
+  \email{ \VAR{ basics.email } }
+  \linkedin{ \VAR{ basics.linkedin } }
+  \location{ \VAR{ basics.location } }
+  \clearance{ \VAR{ basics.security_clearance } }
+}
+
+\makecvheader
+
+\vspace{2em}
+
+%% Start larger font block for the letter body
+{\fontsize{10.5}{14}\selectfont
+
+\begin{flushleft}
+    \VAR{ today.strftime('%B %d, %Y') } \\
+    \vspace{1.5em}
+    \textbf{Re: \VAR{ cover_letter.subject }} \\
+\end{flushleft}
+
+\vspace{1.5em}
+
+Dear \VAR{ cover_letter.recipient },
+
+\vspace{1em}
+
+{\fontsize{10.5}{14}\selectfont
+
+\VAR{ cover_letter.opening }
+
+\vspace{1em}
+
+\VAR{ cover_letter.body }
+
+\vspace{1em}
+
+\VAR{ cover_letter.education_context }
+
+\vspace{1em}
+
+\VAR{ cover_letter.engagement_status }
+
+\vspace{1em}
+
+\VAR{ cover_letter.closing }
+
+\vspace{2em}
+
+Yours sincerely,
+
+\vspace{3em}
+
+\hspace{-1pt}\textbf{ \VAR{ basics.name } }
+
+} %% End larger font block
+
+\end{document}

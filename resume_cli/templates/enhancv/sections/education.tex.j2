@@ -1,7 +1,0 @@
-{% for edu in education[:2] %}
-\cvevent{ {{ edu.degree }} }{ {{ edu.institution }} }{ {{ edu.year }} }{Online}
-
-{% if not loop.last %}
-\divider
-{% endif %}
-{% endfor %}

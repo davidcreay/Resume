@@ -1,5 +1,5 @@
 \begin{itemize}
-    {% for edu in education %}
-    \item \textbf{ {{ edu.degree }} } -- {{ edu.institution }} {% if edu.year %}({{ edu.year }}){% endif %}
-    {% endfor %}
+    \BLOCK{ for edu in education }
+    \item \textbf{ \VAR{ edu.degree } } -- \VAR{ edu.institution } \BLOCK{ if edu.year }(\VAR{ edu.year })\BLOCK{ endif }
+    \BLOCK{ endfor }
 \end{itemize}

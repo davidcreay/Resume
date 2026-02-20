@@ -1,0 +1,8 @@
+\cvsection{Education}
+\BLOCK{ for edu in education[:2] }
+\cvevent{\VAR{ edu.studyType } \VAR{ edu.area } }{\VAR{ edu.institution } }{\VAR{ edu.startDate } - \VAR{ edu.endDate } }{\VAR{ edu.location | default('Online') } }
+
+\BLOCK{ if not loop.last }
+\divider
+\BLOCK{ endif }
+\BLOCK{ endfor }

@@ -1,44 +1,44 @@
-\documentclass{resume}
+\documentclass{\VAR{ settings.style }} % Use dynamic style name
 
 \begin{document}
 
 % --- CONTACT HEADER ---
+% Ensure prepare_render_context maps data to "personal" or update to "basics"
 \resumeHeader
-    { {{ personal.name }} }
-    { {{ personal.title }} }
-    { {{ personal.location }} }
-    { {{ personal.email }} }
-    { {{ personal.phone }} }
-    { {{ personal.linkedin }} }
-    { {{ personal.github }} }
+    { \VAR{ personal.name } }
+    { \VAR{ personal.title } }
+    { \VAR{ personal.location } }
+    { \VAR{ personal.email } }
+    { \VAR{ personal.phone } }
+    { \VAR{ personal.linkedin } }
+    { \VAR{ personal.github } }
 
 % --- SUMMARY ---
 \section{PROFESSIONAL SUMMARY}
-{{ personal.summary }}
+\VAR{ personal.summary }
 
 % --- SKILLS OVERVIEW ---
 \section{SKILLS OVERVIEW}
-{% include 'sections/skills.tex.j2' %}
-{%  if graphics %}
+\BLOCK{ include 'sections/skills.tex.j2' }
+\BLOCK{ if settings.graphics }
 \vspace{4pt}
-{% endif %}
+\BLOCK{ endif }
 
 \clearpage
 % --- PROFESSIONAL EXPERIENCE ---
 \section{PROFESSIONAL EXPERIENCE}
-{% include 'sections/experience.tex.j2' %}
+\BLOCK{ include 'sections/experience.tex.j2' }
 
 % --- EDUCATION ---
 \section{EDUCATION}
-{% include 'sections/education.tex.j2' %}
+\BLOCK{ include 'sections/education.tex.j2' }
 
 % --- CERTS ---
 \section{CERTIFICATIONS AND TRAINING}
-{% include 'sections/training.tex.j2' %}
-{#\input{sections/badges}#}
+\BLOCK{ include 'sections/training.tex.j2' }
 
 % --- INTERESTS ---
 \section{INTERESTS}
-{% include 'sections/interests.tex.j2' %}
+\BLOCK{ include 'sections/interests.tex.j2' }
 
 \end{document}

@@ -1,4 +1,6 @@
 basics:
+  security_clearance: BPSS (Active)
+  post_nominals: MBA, BSc
   email: david@awsbot.com
   image: https://avatars.githubusercontent.com/u/15360496
   label: Senior AWS Architect & DevSecOps Engineer
@@ -6,7 +8,7 @@ basics:
     city: London
     countryCode: GB
     region: United Kingdom
-  name: David C Reay
+  name: David Reay
   phone: +44 (0) 7834 980 889
   profiles:
   - network: LinkedIn
@@ -25,10 +27,13 @@ basics:
 certificates:
 - date: '2017-01-01'
   issuer: Amazon Web Services (AWS)
-  name: AWS Certified Solutions Architect - Professional
+  name: Solutions Architect - Professional
 - date: '2017-01-01'
   issuer: Amazon Web Services (AWS)
-  name: AWS Certified DevOps Engineer - Professional
+  name: DevOps Engineer - Professional
+- date: '2018-01-01'
+  issuer: Scaled Agile
+  name: SAFe 4 Practitioner
 - date: '2017-01-01'
   issuer: Amazon Web Services (AWS)
   name: "AWS Certified Solutions Architect \u2013 Associate"
@@ -38,9 +43,7 @@ certificates:
 - date: '2017-01-01'
   issuer: Amazon Web Services (AWS)
   name: "AWS Certified Developer \u2013 Associate"
-- date: '2018-01-01'
-  issuer: Scaled Agile
-  name: SAFe 4 Practitioner
+
 - date: '2010-01-01'
   issuer: AXELOS
   name: ITILv3 Foundation
@@ -128,9 +131,12 @@ education:
   studyType: ABRSM Grade 8 & Grade 5
 interests:
 - keywords:
-  - Spanish/classical guitar
   - Jazz and blues piano
-  name: Music
+  - Classical guitar
+  - Graphic design.
+  name: Music & Arts
+- name: Game Theory & AI
+  keywords: Contributor to GNUBG project; specialized in Neural Network integration
 - keywords:
   - Graphic design and illustration
   - Cooking
@@ -155,6 +161,54 @@ languages:
 - fluency: Beginner
   language: Dutch
 skills:
+- name: all
+  keywords:
+    - Security Hub
+    - GuardDuty
+    - Inspector
+    - IAM Hardening
+    - VPC Security
+    - NACL/WAF
+    - WS Config
+    - CloudTrail
+    - KMS
+    - Secrets Manager
+    - CloudFormation
+    - SAM/CDK
+    - Boto3/Python
+    - GitLab CI
+    - GitHub Actions
+    - OIDC Auth
+    - GitOps
+    - Checkov/tfsec
+    - ISO27001 SOC2
+    - Vulnerability Triage
+    - Agile/Scrum
+    - SAFe
+    - TDD
+    - DevSecOps
+    - AWS
+    - Kubernetes
+    - Terraform
+    - Docker
+    - Python
+    - Go
+    - Serverless
+    - DevOps
+    - Linux
+    - FinOps
+    - ISO27001
+    - Security
+    - Compliance
+    - CI/CD
+    - Automation
+    - Architecture
+    - Networking
+    - SQL
+    - Glue
+    - Spark
+    - Unity
+    - SaaS
 - keywords:
   - AWS (EC2, ALB, RDS, S3, IAM, CloudTrail, GuardDuty)
   - Cost Optimization (83% reduction in Secrets Manager overhead)
@@ -239,6 +293,7 @@ volunteer:
     a Nigerian youth-led social enterprise.
 work:
 - endDate: '2026-02-01'
+  location: London, UK
   highlights:
   - Successfully prepared infrastructure for ISO27001 Stage 2 audit by remediating
     Internal Audit gaps A.8.31 and A.8.32.
@@ -455,4 +510,19 @@ work:
   position: IT Assistant
   startDate: '2007-02-01'
   summary: IT support and infrastructure administration.
+achievements:
+- icon: '\faUserShield'
+  title: 'ISO27001 Remediation'
+  description: 'Spearheaded infrastructure hardening and gap remediation for ISO27001 Stage 1 and 2 audits.'
+- icon: '\faTerminal'
+  title: 'Automated Security'
+  description: 'Fully automated security agent deployment (Trend Micro) via GitLab CI/CD and AWS Systems Manager.'
+- icon: '\faLock'
+  title: 'Network Hardening'
+  description: 'Executed full VPC segmentation, migrating critical apps and RDS instances to private subnets.'
+- icon: '\faCogs'
+  title: 'Cost Optimization'
+  description: 'Reduced Secrets Manager overhead by architecting JSON-bundled secret storage.'
+
+
 

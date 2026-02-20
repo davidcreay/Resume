@@ -1,0 +1,7 @@
+\cvsection{Certification}
+\BLOCK{ for cert in certifications }
+\cvcert{ \VAR{ cert.name } }{ \VAR{ cert.issuer } }{ \VAR{ cert.year } }
+\BLOCK{ if not loop.last }
+\divider
+\BLOCK{ endif }
+\BLOCK{ endfor }

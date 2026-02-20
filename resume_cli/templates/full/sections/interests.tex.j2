@@ -1,0 +1,16 @@
+\cvsection{Interests}
+\BLOCK{ for interest in interests }
+\cvachievement{\faCheck}{
+\VAR{ interest.name }
+}
+{
+\BLOCK{ if interest.keywords is string }
+    \VAR{ interest.keywords }
+\BLOCK{ else }
+    \VAR{ interest.keywords | join(', ') }
+\BLOCK{ endif }
+}
+\BLOCK{ if not loop.last }
+\divider
+\BLOCK{ endif }
+\BLOCK{ endfor }

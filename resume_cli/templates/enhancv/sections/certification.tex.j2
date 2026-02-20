@@ -1,6 +1,0 @@
-{% for cert in certifications_and_training -%}
-\cvcert{ {{ cert.name | replace('&', '\&') }} }{ {{ cert.issuer }} }{ {{ cert.year }} }
-{% if not loop.last -%}
-\divider
-{% endif -%}
-{% endfor %}

@@ -1,12 +1,9 @@
-{% for group in skill_groups %}
-\noindent % Prevents the "nesting" indentation
+\BLOCK{ for group in skill_groups }
+\noindent
 \begin{tabular}{ @{} p{0.90\textwidth} @{} r @{} }
-    \large{ \textbf{ {{ group.category }} }} & \textbf{ {% if group.has_years %}(yrs){% endif %} }\vspace{2pt} \\
-    {% for item in group.entries %}
-        \textbf{ {{ item.label }}{% if item.desc %}:{% endif %} } {{ item.desc }} & {{ item.yrs }} \\
-    {% endfor %}
-    \vspace{2pt}
+    \large{ \textbf{ \VAR{ group.category } }} & \textbf{ \BLOCK{ if group.has_years }(yrs)\BLOCK{ endif } } \\
+    \BLOCK{ for item in group.entries }
+        \textbf{ \VAR{ item.label } } & \VAR{ item.yrs } \\
+    \BLOCK{ endfor }
 \end{tabular}
-\vspace{4pt}
-
-{% endfor %} % The blank line above this is critical for stopping the nesting
+\BLOCK{ endfor }

@@ -1,11 +1,11 @@
-{% for group in certifications_and_training | groupby('category') %}
-\subsubsection*{ {{ group.grouper }} }
+\BLOCK{ for group in certifications_and_training | groupby('category') }
+\subsubsection*{ \VAR{ group.grouper } }
 \begin{itemize}
-    {% for cert in group.list %}
-    \item \textbf{ {{ cert.name }} } ({{ cert.year }})
-    {% if cert.credential_id %}
-    --- \textit{\small ID: {{ cert.credential_id | replace('_', '\_') }}}
-    {% endif %}
-    {% endfor %}
+    \BLOCK{ for cert in group.list }
+    \item \textbf{ \VAR{ cert.name } } (\VAR{ cert.year })
+    \BLOCK{ if cert.credential_id }
+    --- \textit{\small ID: \VAR{ cert.credential_id }}
+    \BLOCK{ endif }
+    \BLOCK{ endfor }
 \end{itemize}
-{% endfor %}
+\BLOCK{ endfor }

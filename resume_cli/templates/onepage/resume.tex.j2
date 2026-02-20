@@ -1,0 +1,38 @@
+\documentclass[8pt,a4paper,ragged2e,withhyper]{style}
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\begin{document}
+
+\name[\VAR{basics.post_nominals}]{\hspace{-0.25ex}{\VAR{ basics.name }}}
+\tagline{\VAR{basics.label}}
+
+\personalinfo{
+  \email{\VAR{ basics.email }}
+  \linkedin{\VAR{ basics.linkedin }}
+  \location{\VAR{ basics.location.city }, \VAR{ basics.location.countryCode }}
+  \clearance{\VAR{ basics.security_clearance }}
+}
+
+\makecvheader
+\columnratio{0.6}
+\begin{paracol}{2}
+
+\cvsection{Summary}
+\VAR{ basics.summary }
+
+\BLOCK{ include 'sections/experience.tex.j2' }
+\BLOCK{ include 'sections/education.tex.j2' }
+\BLOCK{ include 'sections/languages.tex.j2' }
+
+\switchcolumn
+
+\BLOCK{ include 'sections/key_achievements.tex.j2' }
+
+\BLOCK{ include 'sections/skills.tex.j2' }
+
+\BLOCK{ include 'sections/certification.tex.j2' }
+
+\BLOCK{ include 'sections/interests.tex.j2' }
+
+\end{paracol}
+\end{document}

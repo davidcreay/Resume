@@ -9,6 +9,9 @@ on:
 jobs:
   update-resume-gist:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
@@ -16,7 +19,7 @@ jobs:
     - name: Update Resume Gist
       uses: exuanbo/actions-deploy-gist@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GIST_TOKEN }}
         gist_id: f39115911a69866ed0107f997489987e
         file_path: resume.json
 

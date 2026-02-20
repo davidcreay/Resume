@@ -1,0 +1,27 @@
+[project]
+name = "resume"
+version = "0.1.0"
+description = "David Reay's resume."
+authors = [
+    {name = "David Reay", email = "david@awsbot.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "jinja2 (>=3.1.6,<4.0.0)",
+    "rendercv[full] (>=2.6,<3.0)",
+    "pyyaml (>=6.0.3,<7.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)",
+    "pytest-env (>=1.5.0,<2.0.0)"
+]
+[tool.poetry]
+package-mode = false
+
+[project.scripts]
+resume = "resume.main:main"
+
+[dependency-groups]
+dev = [
+    "pytest-cov (>=7.0.0,<8.0.0)",
+    "pytest-env (>=1.5.0,<2.0.0)"
+]

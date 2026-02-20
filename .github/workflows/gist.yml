@@ -1,6 +1,10 @@
 name: Update Resume Gist
 
-on: push
+on:
+  push:
+    branches: [main, master]
+    tags: ['v*.*.*']
+  workflow_dispatch:
 
 jobs:
   update-resume-gist:

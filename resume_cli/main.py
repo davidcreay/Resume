@@ -36,5 +36,8 @@ def import_linkedin(
     typer.echo(f"Imported {len(data['work'])} roles to {output_path}")
 
 
-if __name__ == "__main__":
+def main():
     app()
+
+if __name__ == "__main__":
+    main()

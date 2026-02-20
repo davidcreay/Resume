@@ -1,0 +1,458 @@
+basics:
+  email: david@awsbot.com
+  image: https://avatars.githubusercontent.com/u/15360496
+  label: Senior AWS Architect & DevSecOps Engineer
+  location:
+    city: London
+    countryCode: GB
+    region: United Kingdom
+  name: David C Reay
+  phone: +44 (0) 7834 980 889
+  profiles:
+  - network: LinkedIn
+    url: https://www.linkedin.com/in/davidreay/
+    username: davidreay
+  - network: GitHub
+    url: https://github.com/davidcreay
+    username: davidcreay
+  summary: 'Strategic AWS Solutions Architect (Professional) and MBA Technology Management
+    Graduate with 15+ years of experience in high-security infrastructure and automated
+    systems engineering. Expert in bridging the gap between engineering and compliance
+    (ISO27001/SOC2), with a proven track record of reducing operational costs by up
+    to 80% through serverless refactoring and automated vulnerability remediation.
+    Post-nominals: MBA, BSc. Security Clearance: BPSS (Active).'
+  url: https://forhire.awsbot.com
+certificates:
+- date: '2017-01-01'
+  issuer: Amazon Web Services (AWS)
+  name: AWS Certified Solutions Architect - Professional
+- date: '2017-01-01'
+  issuer: Amazon Web Services (AWS)
+  name: AWS Certified DevOps Engineer - Professional
+- date: '2017-01-01'
+  issuer: Amazon Web Services (AWS)
+  name: "AWS Certified Solutions Architect \u2013 Associate"
+- date: '2017-01-01'
+  issuer: Amazon Web Services (AWS)
+  name: "AWS Certified SysOps Administrator \u2013 Associate"
+- date: '2017-01-01'
+  issuer: Amazon Web Services (AWS)
+  name: "AWS Certified Developer \u2013 Associate"
+- date: '2018-01-01'
+  issuer: Scaled Agile
+  name: SAFe 4 Practitioner
+- date: '2010-01-01'
+  issuer: AXELOS
+  name: ITILv3 Foundation
+- date: '2006-01-01'
+  issuer: Cisco
+  name: Cisco Certified Network Associate (CCNA 640-801)
+- date: '2020-01-01'
+  issuer: Amazon Web Services (AWS)
+  name: 'AWS SaaS Factory Architecture Track: SaaS Migration Strategies'
+- date: '2019-01-01'
+  issuer: Coursera
+  name: End-to-End Machine Learning with TensorFlow on GCP
+- date: '2019-01-01'
+  issuer: Coursera
+  name: Exploring and Preparing your Data with BigQuery
+- date: '2019-01-01'
+  issuer: Coursera
+  name: Google Cloud Platform Big Data and Machine Learning Fundamentals
+- date: '2019-01-01'
+  issuer: Coursera
+  name: How Google does Machine Learning
+- date: '2018-01-01'
+  issuer: Lynda.com
+  name: 'Artificial Intelligence Foundations: Neural Networks'
+- date: '2019-01-01'
+  issuer: Coursera
+  name: Google Cloud Platform Fundamentals for AWS Professionals
+- date: '2019-01-01'
+  issuer: Coursera
+  name: Getting Started with Google Kubernetes Engine
+- date: '2019-01-01'
+  issuer: SymfonyCasts
+  name: Symfony 4 Level 1
+education:
+- area: Cyber Security
+  endDate: '2031-12-31'
+  institution: The Open University
+  startDate: '2025-01-01'
+  studyType: MSc
+- area: Artificial Intelligence
+  endDate: '2027-12-31'
+  institution: University of Hertfordshire
+  startDate: '2025-01-01'
+  studyType: MSc
+- area: Indie Game Development
+  endDate: '2027-12-31'
+  institution: Falmouth University
+  startDate: '2025-01-01'
+  studyType: MA
+- area: Technology Management
+  endDate: '2024-12-31'
+  institution: The Open University
+  startDate: '2020-01-01'
+  studyType: MBA
+- area: Physical Science
+  endDate: '2011-12-31'
+  institution: The Open University
+  score: First-Class Honours
+  startDate: '2006-01-01'
+  studyType: BSc
+- area: Mathematics and Computing
+  endDate: '2008-12-31'
+  institution: The Open University
+  startDate: '2006-01-01'
+  studyType: Certificate
+- area: Sound Engineering and Music Technology
+  endDate: '2003-12-31'
+  institution: Confetti Studios, Nottingham
+  startDate: '2000-01-01'
+  studyType: HND
+- area: Physics
+  endDate: '1999-12-31'
+  institution: Amersham and Wycombe College
+  startDate: '1998-01-01'
+  studyType: A-level
+- area: Mathematics and English
+  endDate: '1998-12-31'
+  institution: Ashlyns Secondary School
+  startDate: '1993-01-01'
+  studyType: A-levels / GCSEs
+- area: Piano and Theory
+  endDate: '2004-12-31'
+  institution: Private Tuition
+  startDate: '2000-01-01'
+  studyType: ABRSM Grade 8 & Grade 5
+interests:
+- keywords:
+  - Spanish/classical guitar
+  - Jazz and blues piano
+  name: Music
+- keywords:
+  - Graphic design and illustration
+  - Cooking
+  name: Creative
+- keywords:
+  - Video games
+  - Backgammon
+  name: Gaming
+- keywords:
+  - Property
+  - Traveling
+  name: Lifestyle
+languages:
+- fluency: Native
+  language: English
+- fluency: Beginner
+  language: French
+- fluency: Beginner
+  language: German
+- fluency: Beginner
+  language: Spanish
+- fluency: Beginner
+  language: Dutch
+skills:
+- keywords:
+  - AWS (EC2, ALB, RDS, S3, IAM, CloudTrail, GuardDuty)
+  - Cost Optimization (83% reduction in Secrets Manager overhead)
+  - Serverless Architecture (Lambda, EventBridge, SAM)
+  - Graviton (ARM64) Migration & Performance Tuning
+  name: Cloud Architecture & FinOps
+- keywords:
+  - ISO27001 & SOC2 Framework Implementation
+  - Vanta & Nucleus Compliance Platforms
+  - VPC Network Segregation & Hardening
+  - Automated Vulnerability Patching & Triage
+  name: Security & Compliance
+- keywords:
+  - Infrastructure as Code (CloudFormation, Terraform, SAM)
+  - CI/CD Pipelines (GitLab CI, AWS CodeDeploy, OIDC)
+  - Containerization & Orchestration (Docker, Elastic Beanstalk)
+  - Observability (CloudWatch Dashboards, Logging, Alarms)
+  name: DevOps & Automation
+- keywords:
+  - Complex Org Design (10+ yrs)
+  - New Solutions Design (10+ yrs)
+  - Migration Planning (10+ yrs)
+  - Cost Optimisation (10+ yrs)
+  - Continuous Improvement (10+ yrs)
+  - Disaster Recovery (10+ yrs)
+  name: Solutions Architecture
+- keywords:
+  - Containerisation - Kubernetes, ECS, ECR, EKS, Docker (10+ yrs)
+  - CI/CD - Jenkins, Anthill Pro, TeamCity, CodePipeline (10+ yrs)
+  - Config mgmt - Ansible, Chef, Puppet, Salt Stack (10+ yrs)
+  - Serverless - APi Gateway, Lambda, DynamoDb (10+ yrs)
+  - Linux - AMI baking, Shell scripts (10+ yrs)
+  name: DevOps Engineering
+- keywords:
+  - Machine learning - Amazon Machine Learning, SageMaker (1 yr)
+  - Processing - EMR, Pyspark, AWS Glue, Hadoop (3 yrs)
+  - Analysis - Athena, BigQuery (2 yrs)
+  - Collection/Storage - Kinesis, SQS, DynamoDb (3 yrs)
+  name: ML & Data
+- keywords:
+  - Logging And Monitoring - ELK, Splunk, CloudWatch (10+ yrs)
+  - Infrastructure Security - IAM, WAF, GDPR (10+ yrs)
+  - Network Design - VPC, NACL, Route 53 (10+ yrs)
+  name: Networking & Security
+- keywords:
+  - Automation - Lambda, Python, nodejs (10+ yrs)
+  - Shell Scripting - Perl, Bash, Ruby (10+ yrs)
+  - AWS SDK - boto3, Ruby, aws-sdk-javascript (10+ yrs)
+  - Web - HTML, CSS, Javascript, PHP, RoR (10+ yrs)
+  - Java & Scala
+  name: Programming
+- keywords:
+  - Unity - UI 2D game development (3 yrs)
+  - Ci/CD - GameCI and fastlane (1 yr)
+  - C# scripting (3 yrs)
+  - Mobile - iOS and Android deployments (1 yr)
+  name: Mobile & Video Game Development
+volunteer:
+- endDate: '2025-08-01'
+  highlights:
+  - Conducted workshops and technical training sessions on Generative AI tailored
+    to electoral needs.
+  - Identified key areas where AI solutions could enhance office efficiency.
+  - Developed and implemented custom AI solutions.
+  - Created comprehensive guides to ensure successful long-term adoption of AI technologies.
+  organization: US Digital Response
+  position: Volunteer Technical Consultant
+  startDate: '2024-03-01'
+  summary: Assisting government agencies in leveraging technology. Currently working
+    with the Arizona Coconino Electoral Office.
+- endDate: '2024-08-01'
+  highlights:
+  - Designed and developed a 2D card game for Android using Unity and C#.
+  - Led the project from concept to deployment, coordinating with international stakeholders.
+  - Conducted thorough testing and optimization for performance and stability on Android
+    devices.
+  - Provided comprehensive documentation and training.
+  organization: TechToTheRescue
+  position: Volunteer Developer
+  startDate: '2024-02-01'
+  summary: Collaborating with a charitable organisation to support nonprofits. Assisting
+    a Nigerian youth-led social enterprise.
+work:
+- endDate: '2026-02-01'
+  highlights:
+  - Successfully prepared infrastructure for ISO27001 Stage 2 audit by remediating
+    Internal Audit gaps A.8.31 and A.8.32.
+  - Reduced Secrets Manager costs by approximately 83% by architecting JSON-bundled
+    secret storage.
+  - Fully automated security agent deployment (Trend Micro) via GitLab CI/CD and AWS
+    Systems Manager.
+  - Achieved 100% visibility for critical database and load balancer metrics through
+    Infrastructure-as-Code monitoring.
+  - 'Infrastructure Modernization: Migrated legacy NGINX EC2 reverse proxies to AWS
+    ALBs with automated SSL.'
+  - 'Network Security: Executed full VPC network segregation, migrating Elastic Beanstalk
+    applications to private subnets.'
+  - 'Security Hardening: Implemented AWS GuardDuty, automated SSH lockdown scripts,
+    and enforced CloudTrail log integrity.'
+  - 'Serverless Migration: Refactored tasks into serverless AWS Lambda functions with
+    EventBridge triggers.'
+  name: Tabled Technologies Limited
+  position: Senior DevOps Engineer
+  startDate: '2025-12-01'
+  summary: Spearheaded the infrastructure remediation and security hardening required
+    for ISO27001 Stage 1 and Stage 2 compliance. Collaborated with external auditors
+    (Cognisys) to identify gaps and implemented automated monitoring, logging, and
+    network isolation across production and staging AWS environments.
+- endDate: '2025-02-01'
+  highlights:
+  - Architected multi-account AWS Landing Zones and VPC segmentation using Terraform.
+  - Developed automated CI/CD pipelines for data solutions using Glue and Lambda.
+  - Mentored junior staff on DevSecOps best practices and AWS Well-Architected Framework.
+  - Utilized Amazon Bedrock and Generative AI (Chat-GPT).
+  name: Giacom (Communications) Limited
+  position: Senior Data Engineer
+  startDate: '2024-04-01'
+  summary: Responsible for designing and implementing data architecture solutions,
+    building and maintaining data pipelines for a team delivering AWS-based data solutions.
+- endDate: '2024-01-01'
+  highlights:
+  - Developed an existing de-identification data pipeline with Pyspark and NLP.
+  - Performance testing and enhancement with ARM64 AWS Graviton processors.
+  - Implemented TDD with pytest, pylint, and OpenAI API.
+  - Infrastructure as Code with CloudFormation and Dockerization with EMR Serverless.
+  name: Mental Health Innovations UK
+  position: Data Engineer
+  startDate: '2023-05-01'
+  summary: Contract to develop an existing de-identification data pipeline with pyspark
+    and NLP.
+- endDate: '2023-06-01'
+  highlights:
+  - Migrated rental car aggregation website into AWS using EC2, RDS, and ElastiCache.
+  - Deployed Single Page Application (SPA) using CloudFront, Lambda@Edge, and S3.
+  - Infrastructure as Code with Terraform.
+  - PHP application configuration and deployment with GitLab, CodePipeline, and Docker.
+  name: Floyt Mobility
+  position: Senior DevOps Engineer
+  startDate: '2023-01-01'
+  summary: Contract to migrate a rental car aggregation website into AWS.
+- endDate: '2022-12-01'
+  highlights:
+  - Deployed Django applications in the Beijing AWS region for DNA sequencing pipelines.
+  - Automated 24+ specialized bioinformatics tools (BLAST, SAMTools) via Ansible.
+  - Developed custom AWS Data Lake using Postgres (RDS), Lambda, and Step Functions.
+  - Jenkins pipeline development and IaC with CloudFormation.
+  name: AstraZeneca
+  position: Senior DevOps Engineer
+  startDate: '2022-08-01'
+  summary: Contract to deploy a Django application in the Beijing AWS region for DNA
+    sequencing pipelines.
+- endDate: '2022-10-01'
+  highlights:
+  - Built AWS serverless infrastructure using Chalice, SAM, and API Gateway.
+  - Integrated AppFlow and Salesforce for business process automation.
+  - Python web development with Django and API development.
+  - Data engineering with Glue, Athena, and Pandas (Parquet).
+  name: Admiral Pioneer (Veygo / NalahLife)
+  position: Senior Developer
+  startDate: '2022-06-01'
+  summary: Contract working on AWS serverless infrastructure for a temporary car insurance
+    company (Veygo), and an intrapreneurial health insurance startup (NalahLife).
+- endDate: '2022-03-01'
+  highlights:
+  - Built back-office tools for assessing and reporting financial risk in asset management.
+  - Developed ETL workflows using AWS Glue and Athena for risk measurement.
+  - Serverless development (Lambda, Step Functions, DynamoDB, Cognito).
+  - Python programming with Boto3, NumPy, and Pandas.
+  name: Nationale-Nederlanden Investment Partners
+  position: Senior Data Engineer
+  startDate: '2021-04-01'
+  summary: Contract to work on a team producing back office tools for assessing and
+    reporting on financial risk.
+- endDate: '2021-03-01'
+  highlights:
+  - Architected a complex serverless journey management system for credit card applications.
+  - Integrated 3rd party providers (Onfido, Experian, Equifax) for fraud and credit
+    checks.
+  - Python 3.8 programming with Boto3.
+  - Building AWS serverless stacks (Lambda, Step Functions, API Gateway).
+  name: Chetwood Financial Ltd
+  position: Senior Python Developer
+  startDate: '2020-09-01'
+  summary: Contract to build a credit card application system with serverless technologies
+    in AWS.
+- endDate: '2020-09-01'
+  highlights:
+  - Built a SaaS cloud solution across AWS, GCP, and Azure using Kubernetes and Go.
+  - Designed SaaS AWS Factory and multi-tier SaaS solutions.
+  - Kubernetes orchestration (EKS, GKE) and Helm charts.
+  - Go programming for Lambda and API services.
+  name: Lenses.io
+  position: Senior DevOps Engineer
+  startDate: '2019-11-01'
+  summary: Remote contract to build a SaaS cloud solution with Kubernetes, GoLang
+    and Python.
+- endDate: '2019-10-01'
+  highlights:
+  - Led the migration of global panellist data tracking tools to AWS.
+  - Implemented Big Data pipelines using AirFlow, Kinesis, Firehose, and EMR.
+  - Infrastructure orchestration with Terraform and CloudFormation.
+  - Monitoring and operations using Grafana, Prometheus, and New Relic.
+  name: GFK Nurago
+  position: Team Lead
+  startDate: '2017-07-01'
+  summary: Contract to support and migrate a Global suite of panellist data aggregation
+    tracking tools to AWS.
+- endDate: '2017-06-01'
+  highlights:
+  - Managed Spark/Mesos-based Big Data infrastructure.
+  - Automated build and deployment for Django-based web applications.
+  - AWS Architecture with CloudFormation, ECS, and RDS.
+  name: OpenSignal
+  position: Senior DevOps Engineer
+  startDate: '2017-01-01'
+  summary: Contract to manage Web applications and Big Data technologies for mobile
+    insight.
+- endDate: '2016-11-01'
+  highlights:
+  - Migrated applications from private cloud to AWS.
+  - Conducted performance load testing and multi-account VPC architecture design.
+  - Docker, Ansible, Terraform, and ELK stack implementation.
+  name: De Persgroep Employment Services
+  position: Senior DevOps Engineer
+  startDate: '2016-05-01'
+  summary: Contract to migrate an application from a private Cloud to Amazon Web Services.
+- endDate: '2015-12-01'
+  highlights:
+  - Developed cloud services for the Office of the Public Guardian.
+  - Automated AWS with CloudFormation and Terraform.
+  - SaltStack, Python, and Bash scripting.
+  name: Ministry of Justice
+  position: Senior DevOps Engineer
+  startDate: '2015-07-01'
+  summary: Contract to help develop the Cloud services supporting a web application
+    for the Office of the Public Guardian.
+- endDate: '2015-05-01'
+  highlights:
+  - Consulting for AWS migration focusing on IAM and security.
+  - Test-Driven Development (TDD) with Python.
+  name: ImmobilienScout24.de
+  position: DevOps Engineer
+  startDate: '2015-04-01'
+  summary: Consulting and development skills for their migration to Amazon Web Services.
+- endDate: '2014-12-01'
+  highlights:
+  - Automated deployment of Elasticsearch clusters, log aggregation, and Postgres.
+  - Implemented 'Simian Army' for infrastructure resilience testing.
+  - AWS automation with CloudFormation and Puppet.
+  name: Agents Mutual (Onthemarket.com)
+  position: DevOps Engineer
+  startDate: '2014-10-01'
+  summary: Automate the deployment of web applications, Elasticsearch clusters, and
+    Postgres databases to AWS.
+- endDate: '2014-06-01'
+  highlights:
+  - Migrated high-traffic sites (The Times, The Sun) to AWS.
+  - Developed a custom Ruby toolset for governance and cost analysis of 3000+ apps.
+  - Akamai CDN configuration and management.
+  name: News UK
+  position: DevOps Engineer
+  startDate: '2013-01-01'
+  summary: Systems Engineer working with Digital Productions for migration and automated
+    deployment to AWS.
+- endDate: '2012-12-01'
+  highlights:
+  - Developed a bespoke cloud solution for automated deployment to VMWare.
+  - Puppet and Ruby development.
+  - Maintenance of web stacks and network infrastructure.
+  name: The Financial Times
+  position: Integration Engineer
+  startDate: '2012-01-01'
+  summary: Developing a bespoke cloud solution for automated deployment and configuration.
+- endDate: '2011-12-01'
+  highlights:
+  - Supported 100+ Sun Solaris and Linux servers for the Bodleian Library.
+  - Automated server builds using Puppet.
+  - VMWare/vSphere administration and Solaris support.
+  name: Oxford University
+  position: Senior Systems Administrator
+  startDate: '2010-11-01'
+  summary: Senior UNIX and network administrator supporting 100+ Sun Solaris and virtualized
+    Enterprise Linux servers.
+- endDate: '2010-11-01'
+  highlights:
+  - Monitoring and trending with Nagios and Cacti.
+  - Automated Linux and Windows server/desktop builds.
+  - Cisco network infrastructure configuration.
+  name: Betgenius Limited
+  position: Systems Administrator
+  startDate: '2008-03-01'
+  summary: Operations management and senior systems administration.
+- endDate: '2008-02-01'
+  highlights:
+  - Windows infrastructure administration (Active Directory, Exchange).
+  - Backups with Symantec Backup Exec and network design.
+  name: GoldCrest Post London
+  position: IT Assistant
+  startDate: '2007-02-01'
+  summary: IT support and infrastructure administration.
+

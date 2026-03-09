@@ -1,0 +1,10 @@
+\BLOCK{ if achievements }
+\par
+\cvsection{Key Achievements}
+\BLOCK{ for item in achievements }
+\cvachievement{\VAR{ item.icon | default('\\faStar') }}{\VAR{ item.title }}{\VAR{ item.description }}
+\BLOCK{ if not loop.last }
+\vspace{0.4ex}
+\BLOCK{ endif }
+\BLOCK{ endfor }
+\BLOCK{ endif }

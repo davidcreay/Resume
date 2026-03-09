@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "resume-cli/twopage_enhancv",
+  "title": "Resume profile for twopage + enhancv template",
+  "description": "Schema for two-page resume YAML. Layout uses fixed counts; exceeding them is ignored by the template.",
+  "type": "object",
+  "required": ["basics"],
+  "properties": {
+    "basics": {
+      "type": "object",
+      "required": ["name", "email", "label", "summary", "location"],
+      "properties": {
+        "name": { "type": "string" },
+        "post_nominals": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "label": { "type": "string" },
+        "summary": { "type": "string" },
+        "url": { "type": "string" },
+        "phone": { "type": "string" },
+        "image": { "type": "string" },
+        "security_clearance": { "type": "string" },
+        "location": {
+          "type": "object",
+          "required": ["city", "countryCode"],
+          "properties": {
+            "city": { "type": "string" },
+            "countryCode": { "type": "string" },
+            "region": { "type": "string" }
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "network": { "type": "string" },
+              "url": { "type": "string" },
+              "username": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "work": {
+      "type": "array",
+      "maxItems": 8,
+      "description": "Only the first 8 entries are shown on the two-page template.",
+      "items": {
+        "type": "object",
+        "required": ["name", "position", "startDate", "endDate"],
+        "properties": {
+          "name": { "type": "string" },
+          "position": { "type": "string" },
+          "startDate": { "type": "string" },
+          "endDate": { "type": "string" },
+          "location": { "type": "string" },
+          "summary": {
+            "type": "string",
+            "description": "Optional one-line or short paragraph summary for this role, shown above the highlights."
+          },
+          "highlights": {
+            "type": "array",
+            "maxItems": 5,
+            "items": { "type": "string" },
+            "description": "Only the first 5 bullets are shown per job."
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "maxItems": 4,
+      "description": "Only the first 4 entries are shown.",
+      "items": {
+        "type": "object",
+        "required": ["institution", "studyType", "area", "startDate", "endDate"],
+        "properties": {
+          "institution": { "type": "string" },
+          "studyType": { "type": "string" },
+          "area": { "type": "string" },
+          "startDate": { "type": "string" },
+          "endDate": { "type": "string" },
+          "location": { "type": "string" },
+          "score": { "type": "string" }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "maxItems": 4,
+      "description": "Only the first 4 entries are shown (Engineering Proficiencies section).",
+      "items": {
+        "type": "object",
+        "required": ["language", "fluency"],
+        "properties": {
+          "language": { "type": "string" },
+          "fluency": { "type": "string" }
+        }
+      }
+    },
+    "certificates": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Only the first 5 are shown. Use 'date' (YYYY-MM-DD) or 'year'.",
+      "items": {
+        "type": "object",
+        "required": ["name", "issuer"],
+        "properties": {
+          "name": { "type": "string" },
+          "issuer": { "type": "string" },
+          "date": { "type": "string" },
+          "year": { "type": "string" }
+        }
+      }
+    },
+    "interests": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "keywords": {
+            "oneOf": [
+              { "type": "array", "items": { "type": "string" } },
+              { "type": "string" }
+            ]
+          }
+        }
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "maxItems": 6,
+      "description": "Only the first 6 are shown. Use LaTeX icon names e.g. \\faUserShield, \\faLock.",
+      "items": {
+        "type": "object",
+        "required": ["title", "description"],
+        "properties": {
+          "icon": { "type": "string" },
+          "title": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "For enhancv twopage: one group with name 'all' and keywords as flat list of strings.",
+      "items": {
+        "type": "object",
+        "required": ["name", "keywords"],
+        "properties": {
+          "name": { "type": "string" },
+          "keywords": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": { "type": "object" },
+      "description": "Optional projects section (template may use placeholders until wired)."
+    },
+    "volunteer": { "type": "array", "items": { "type": "object" } }
+  }
+}

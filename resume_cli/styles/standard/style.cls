@@ -19,8 +19,9 @@
 \RequirePackage{graphicx}
 \RequirePackage{multirow}
 \RequirePackage{calc}
+\RequirePackage{tabularx}
 \renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\watermarkopacity}{0.2}
+\providecommand{\watermarkopacity}{0.2}
 
 % Styles
 \definecolor{accent}{HTML}{000000}
@@ -33,8 +34,8 @@
 
 % --- CUSTOM COMMANDS ---
 
-% Header Command: \resumeHeader{Name}{Title}{Location}{Email}{Phone}{LinkedIn}{GitHub}{Twitter}
-\newcommand{\resumeHeader}[8]{
+% Header Command: \resumeHeader{Name}{Title}{Location}{Email}{Phone}{LinkedIn}{GitHub}
+\newcommand{\resumeHeader}[7]{
     \begin{center}
         {\Huge \textbf{\color{accent} #1}} \\
         \vspace{4pt}

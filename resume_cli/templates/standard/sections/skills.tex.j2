@@ -1,9 +1,9 @@
-\BLOCK{ for group in skill_groups }
 \noindent
-\begin{tabular}{ @{} p{0.90\textwidth} @{} r @{} }
-    \large{ \textbf{ \VAR{ group.category } }} & \textbf{ \BLOCK{ if group.has_years }(yrs)\BLOCK{ endif } } \\
+\begin{tabularx}{\textwidth}{ @{} >{\raggedright\arraybackslash}X @{} r @{} }
+\BLOCK{ for group in skill_groups }
+    \large\textbf{\VAR{ group.category }} & \BLOCK{ if group.has_years }\textbf{(yrs)}\BLOCK{ endif } \\
     \BLOCK{ for item in group.entries }
-        \textbf{ \VAR{ item.label } } & \VAR{ item.yrs } \\
+        \VAR{ item.label } & \VAR{ item.yrs } \\
     \BLOCK{ endfor }
-\end{tabular}
 \BLOCK{ endfor }
+\end{tabularx}

@@ -20,7 +20,7 @@ all: $(TEMPLATES)
 
 $(TEMPLATES):
 	@echo "--- Rendering Resume ---"
-	@poetry run python main.py \
+	@uv run python main.py \
 		--templatefile templates/$@/resume.tex.j2 \
 		--profile profiles/$@/$(PROFILE).yaml \
 		--output templates/$@/resume.tex \
@@ -29,7 +29,7 @@ $(TEMPLATES):
 
 	@if [ -f templates/$@/cover_letter.tex.j2 ]; then \
 		echo "--- Rendering Cover Letter ---"; \
-		poetry run python main.py \
+		uv run python main.py \
 			--templatefile templates/$@/cover_letter.tex.j2 \
 			--profile profiles/$@/$(PROFILE).yaml \
 			--output templates/$@/cover_letter.tex \
@@ -66,33 +66,33 @@ help: ## Show this help message
 
 # --- Project Installation ---
 install: ## Install project dependencies
-	poetry install
+	uv sync
 
 # --- Linting & Formatting Targets (Matching linting.yml) ---
 pylint: ## Lint code with pylint
 	@echo "Linting code with pylint..."
-	poetry run pylint --rcfile=.pylintrc $(SOURCE_DIR)/
+	uv run pylint --rcfile=.pylintrc $(SOURCE_DIR)/
 
 black-check: ## Reformat code with black
 	@echo "Reformatting code with black..."
-	poetry run black --check .
+	uv run black --check .
 
 flake8-check: ## Lint code with flake8
 	@echo "Linting code with flake8..."
-	poetry run flake8 $(SOURCE_DIR)/
+	uv run flake8 $(SOURCE_DIR)/
 
 ruff-check: ## Lint code with ruff
 	@echo "Linting code with ruff..."
-	poetry run ruff check .
+	uv run ruff check .
 
 isort-check: ## Lint code with isort
-	@echo "Linting code with ruff..."
-	poetry run isort check .
+	@echo "Linting code with isort..."
+	uv run isort check .
 
 # --- Tests ---
 test: ## Runs tests based on MARK.
 	@echo "Running tests with filter: $(MARK)"
-	@PYTHONPATH=. poetry run pytest \
+	@PYTHONPATH=. uv run pytest \
 		$(MARK) \
 		-vv \
 		-s \
@@ -118,12 +118,12 @@ checkin: ## Git commit and push, allows for a dynamic comment
 
 # Install pre-commit hooks into your .git/ directory
 install-hooks:
-	poetry run pre-commit install
+	uv run pre-commit install
 
 # Run all hooks manually on all files
 pre-commit:
-	poetry run pre-commit run --all-files
+	uv run pre-commit run --all-files
 
 test-pip-install:
 	@echo "Installing from testpypi..."
-	pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ resume-cli
+	uv pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ resume-cli

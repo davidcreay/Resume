@@ -1,0 +1,11 @@
+\BLOCK{ if certifications }
+\par
+\cvsection{Certification}
+\BLOCK{ for cert in certifications }
+\BLOCK{ set year_str = cert.year | default(cert.date[:4] if cert.date else '') }
+\cvevent{ \VAR{ cert.name } }{ \VAR{ cert.issuer } }{\VAR{ year_str } }{\VAR{ 'Online' } }
+\BLOCK{ if not loop.last }
+\divider
+\BLOCK{ endif }
+\BLOCK{ endfor }
+\BLOCK{ endif }

@@ -125,3 +125,43 @@ When I'm not architecting cloud solutions, I'm likely:
 ## 📫 Connect with me
 - **Email:** [david@awsbot.com](mailto:david@awsbot.com)
 - **Web:** [forhire.awsbot.com](https://forhire.awsbot.com)
+
+---
+
+## Resume CLI & tailor
+
+This repo includes a CLI that builds PDFs from `resume.yaml` and can **tailor** your resume to a job description using an LLM.
+
+**Model:** Choose a **style** (e.g. `enhancv`) and a **layout** (onepage, twopage, or full). Schema and layout limits are derived from `resume_cli/schemas/{style}.json` and `resume_cli/schemas/{style}_limits.yaml`. Omit `--layout` when rendering to build **all** layouts (onepage, twopage, full) in one run.
+
+### Install (with tailor + job file support)
+
+```bash
+pip install -e ".[all]"
+# or: .[tailor] for LLM only, .[job-files] for PDF/DOCX job files
+```
+
+### Render
+
+- **Single layout:** `resume-cli render --style enhancv --layout onepage --name my_resume`
+- **All layouts (no `--layout`):** builds onepage, twopage, and full; exports e.g. `my_resume_onepage_YYYYMMDD.pdf`, `my_resume_twopage_YYYYMMDD.pdf`, `my_resume_full_YYYYMMDD.pdf`
+- Default style is `enhancv`; default when `--layout` is omitted is to build all three layouts.
+
+### Tailor to a job
+
+Profile YAML is validated and trimmed to the schema and (if set) layout limits. Use `--layout onepage` or `--layout twopage` to constrain output to that layout; omit for no trimming (full profile). A job-tailored onepage profile for the PEP/Bedrock role (see `job.txt`) is in **`job_onepage.yaml`**; use `--profile job_onepage.yaml` when rendering.
+
+**OpenAI** (set `OPENAI_API_KEY`):
+
+```bash
+resume-cli tailor job.txt -o tailored.yaml
+resume-cli tailor job.txt -o tailored.yaml --layout onepage --render
+```
+
+**AWS Bedrock** (uses `AWS_REGION` / default credentials):
+
+```bash
+resume-cli tailor job.txt -o tailored.yaml --provider bedrock --layout onepage
+```
+
+Job file can be `.txt`, `.pdf`, or `.docx` (PDF/DOCX need `.[job-files]`).

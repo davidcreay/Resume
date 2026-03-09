@@ -1,0 +1,20 @@
+\BLOCK{ if work }
+\par
+\cvsection{Experience}
+\BLOCK{ for job in work }
+\cvevent{ \VAR{ job.position } }{ \VAR{ job.name } }{ \VAR{ job.startDate | month_year } -- \VAR{ (job.endDate | default('')) | month_year or 'Present' } }{ \VAR{ job.location | default('Remote') } }
+
+\BLOCK{ if job.summary }
+\small \VAR{ job.summary }\par\vspace{0.5ex}
+\BLOCK{ endif }
+\begin{itemize}
+\BLOCK{ for highlight in job.highlights }
+    \item \VAR{ highlight }
+\BLOCK{ endfor }
+\end{itemize}
+
+\BLOCK{ if not loop.last }
+\divider
+\BLOCK{ endif }
+\BLOCK{ endfor }
+\BLOCK{ endif }

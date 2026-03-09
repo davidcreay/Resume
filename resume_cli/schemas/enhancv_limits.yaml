@@ -1,0 +1,34 @@
+# Layout limits for enhancv style. Used when tailoring or trimming to a specific layout.
+# Omit layout or use "full" for no trimming (template will slice as needed).
+
+onepage:
+  work: 3
+  workHighlights: 4
+  education: 3
+  languages: 2
+  certificates: 2
+  interests: 2
+  achievements: 4
+  skills: 40
+
+twopage:
+  work: 7
+  workHighlights: 5
+  education: 4
+  languages: 4
+  certificates: 4
+  interests: 3
+  achievements: 6
+  projects: 4
+  skills: 80
+
+full:
+  work: 20
+  workHighlights: 6
+  education: 6
+  languages: 6
+  certificates: 8
+  interests: 6
+  achievements: 12
+  projects: 8
+  skills: 120

@@ -1,0 +1,22 @@
+\BLOCK{ if projects }
+\par
+\cvsection{Projects}
+\BLOCK{ for proj in projects }
+\cvevent{ \VAR{ proj.name } }{ \VAR{ proj.url | default('') } }{ \VAR{ proj.startDate | default('') } -- \VAR{ proj.endDate | default('Present') } }{ \VAR{ proj.location | default('') } }
+
+\BLOCK{ if proj.description }
+\small \VAR{ proj.description }\par\vspace{0.5ex}
+\BLOCK{ endif }
+\BLOCK{ if proj.highlights }
+\begin{itemize}
+\BLOCK{ for highlight in proj.highlights }
+    \item \VAR{ highlight }
+\BLOCK{ endfor }
+\end{itemize}
+\BLOCK{ endif }
+
+\BLOCK{ if not loop.last }
+\divider
+\BLOCK{ endif }
+\BLOCK{ endfor }
+\BLOCK{ endif }

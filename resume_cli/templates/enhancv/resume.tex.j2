@@ -1,0 +1,85 @@
+\documentclass[\VAR{ font_size },a4paper,ragged2e,withhyper]{style}
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\begin{document}
+
+\name[\VAR{basics.post_nominals}]{\hspace{-0.25ex}{\VAR{ basics.name }}}
+\tagline{\VAR{basics.label}}
+
+\personalinfo{
+  \email{\VAR{ basics.email }}
+  \linkedin{\VAR{ basics.linkedin }}
+  \location{\VAR{ basics.location.city }, \VAR{ basics.location.countryCode }}
+  \clearance{\VAR{ basics.security_clearance }}
+}
+
+\makecvheader
+
+\BLOCK{ if use_paracol }
+\columnratio{0.6}
+\begin{paracol}{2}
+
+\BLOCK{ if basics.summary }
+\cvsection{Summary}
+\VAR{ basics.summary }\par
+\BLOCK{ endif }
+
+\BLOCK{ include 'sections/experience.tex.j2' }
+\BLOCK{ if layout == 'onepage' }
+\BLOCK{ include 'sections/education.tex.j2' }
+\BLOCK{ endif }
+
+\switchcolumn
+
+\BLOCK{ include 'sections/key_achievements.tex.j2' }
+\BLOCK{ if layout == 'full' }\newpage\BLOCK{ endif }
+\BLOCK{ include 'sections/skills.tex.j2' }
+\BLOCK{ if layout == 'twopage' }
+\newpage
+\BLOCK{ include 'sections/certification.tex.j2' }
+\BLOCK{ include 'sections/interests.tex.j2' }
+\BLOCK{ include 'sections/education.tex.j2' }
+\BLOCK{ if include_projects }
+\BLOCK{ include 'sections/projects.tex.j2' }
+\BLOCK{ endif }
+\BLOCK{ if languages }
+\BLOCK{ include 'sections/languages.tex.j2' }
+\BLOCK{ endif }
+\BLOCK{ else }
+\BLOCK{ include 'sections/certification.tex.j2' }
+\BLOCK{ if layout == 'full' }\newpage\BLOCK{ endif }
+\BLOCK{ include 'sections/interests.tex.j2' }
+\BLOCK{ if layout == 'full' }\newpage\BLOCK{ endif }
+\BLOCK{ if layout == 'full' }
+\BLOCK{ include 'sections/education.tex.j2' }
+\BLOCK{ endif }
+\BLOCK{ if include_projects }
+\BLOCK{ include 'sections/projects.tex.j2' }
+\BLOCK{ endif }
+\BLOCK{ if languages }
+\BLOCK{ include 'sections/languages.tex.j2' }
+\BLOCK{ endif }
+\BLOCK{ endif }
+
+\end{paracol}
+\BLOCK{ else }
+\BLOCK{ if basics.summary }
+\cvsection{Summary}
+\VAR{ basics.summary }
+
+\BLOCK{ endif }
+\BLOCK{ include 'sections/skills.tex.j2' }
+\BLOCK{ include 'sections/experience.tex.j2' }
+\BLOCK{ include 'sections/education.tex.j2' }
+\BLOCK{ include 'sections/key_achievements.tex.j2' }
+\BLOCK{ include 'sections/certification.tex.j2' }
+\BLOCK{ include 'sections/interests.tex.j2' }
+\BLOCK{ if include_projects }
+\BLOCK{ include 'sections/projects.tex.j2' }
+\BLOCK{ endif }
+\BLOCK{ if languages }
+\BLOCK{ include 'sections/languages.tex.j2' }
+\BLOCK{ endif }
+\BLOCK{ endif }
+
+\end{document}

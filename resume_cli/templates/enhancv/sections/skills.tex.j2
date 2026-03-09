@@ -1,0 +1,14 @@
+\BLOCK{ if skills }
+\par
+\cvsection{Skills}
+\setstretch{1.5}
+\BLOCK{ for skill in skills }
+\BLOCK{ if skill.size == 'large' }
+  {\large \cvtaga{ \VAR{ skill.name } }}
+\BLOCK{ elif skill.size == 'medium' }
+  {\normalsize \cvtaga{ \VAR{ skill.name } }}
+\BLOCK{ else }
+  {\small \cvtaga{ \VAR{ skill.name } }}
+\BLOCK{ endif }
+\BLOCK{ endfor }
+\BLOCK{ endif }

@@ -278,7 +278,7 @@
   \nointerlineskip\bigskip%  %% bugfix in v1.6.2
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
   {\color{heading}\cvsectionfont\MakeUppercase{#2}}\\[-1ex]%
-  {\color{headingrule}\rule{\linewidth}{1pt}\par}\medskip
+  {\color{headingrule}\rule{\linewidth}{1pt}\par}
 }
 
 \newcommand{\cvsubsection}[1]{%
@@ -310,21 +310,23 @@
 
 % v1.7: adds accsupp for the icon as well
 \newcommand{\cvachievement}[3]{%
+  \renewcommand{\arraystretch}{0.9}%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
     % The [0.5ex] nudges the icon down by half an 'x-height'
     \multirow{2}{*}[-0.5ex]{\Large\color{accent}\BeginAccSupp{method=escape,ActualText={#1: }}#1\EndAccSupp{}} & \large\bfseries\color{emphasis}{#2}\\
     & #3
   \end{tabularx}%
-  \smallskip
+  \renewcommand{\arraystretch}{1}%
+  \vspace{0.5ex}
 }
 
 \newcommand{\cvcert}[2]{%
   {\large\bfseries\color{emphasis}#1\par}
-  \smallskip\normalsize
+  \vspace{0.5ex}\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
-  \smallskip}
-      \vspace{0.25ex}
+  \vspace{0.5ex}}
+      \vspace{0.5ex}
     }
 
 \newcommand{\cvtaga}[1]{\underline{#1}}
